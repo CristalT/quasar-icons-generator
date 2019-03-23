@@ -16,5 +16,8 @@ Where:
 
 Files will be saved into `output` folder
 
+### Example
+`gicons sitapp.png cordova`
+
 Created with [**SHARP**](https://www.npmjs.com/package/sharp)
 

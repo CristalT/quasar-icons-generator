@@ -96,6 +96,12 @@ async function generate(target) {
         sharp(file)
             .resize(96, 96)
             .toFile('output/cordova/android/icon-96-xhdpi.png')
+        sharp(file)
+            .resize(144, 144)
+            .toFile('output/cordova/android/icon-96-xxhdpi.png')
+        sharp(file)
+            .resize(192, 192)
+            .toFile('output/cordova/android/icon-96-xxxhdpi.png')
     
         // icons for bada
         if (!fs.existsSync('output/cordova/bada')) fs.mkdirSync('output/cordova/bada')
