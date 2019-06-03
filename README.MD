@@ -15,7 +15,7 @@
 Where:
 
 - filename: PNG file of at least 1024x1024px
-- target-platform: `cordova` or `quasar`
+- target-platform: `cordova` or `pwa`
 
 Files will be saved into `output` folder
 

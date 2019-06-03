@@ -36,7 +36,7 @@ function sizeControl(file) {
 
 
 async function generate(target) {
-    if (target == 'quasar') {
+    if (target === 'pwa') {
         console.log('Generating icons for ' + target + ' ...')
 
         const control = await sizeControl(file)
@@ -45,17 +45,29 @@ async function generate(target) {
         if (!fs.existsSync('output/quasar')) fs.mkdirSync('output/quasar')
     
         sharp(file)
-            .resize(152, 152)
-            .toFile('output/quasar/apple-icon-152x152.png')
-        sharp(file)
             .resize(16, 16)
             .toFile('output/quasar/favicon-16x16.png')
         sharp(file)
             .resize(32, 32)
             .toFile('output/quasar/favicon-32x32.png')
         sharp(file)
+            .resize(96, 96)
+            .toFile('output/quasar/favicon-96x96.png')
+        sharp(file)
             .resize(128, 128)
             .toFile('output/quasar/icon-128x128.png')
+        sharp(file)
+            .resize(120, 120)
+            .toFile('output/quasar/apple-icon-120x120.png')
+        sharp(file)
+            .resize(152, 152)
+            .toFile('output/quasar/apple-icon-152x152.png')
+        sharp(file)
+            .resize(167, 167)
+            .toFile('output/quasar/apple-icon-167x167.png')
+        sharp(file)
+            .resize(180, 180)
+            .toFile('output/quasar/apple-icon-180x180.png')
         sharp(file)
             .resize(192, 192)
             .toFile('output/quasar/icon-192x192.png')
@@ -72,9 +84,9 @@ async function generate(target) {
             .resize(144, 144)
             .toFile('output/quasar/ms-icon-144x144.png')
 
-        console.log(`All quasar icons generated!`)
+        console.log(`All pwa icons generated!`)
 
-    } else if(target == 'cordova') {
+    } else if(target === 'cordova') {
         console.log('Generating icons for ' + target + ' ...')
 
         const control = await sizeControl(file)
