@@ -13,6 +13,6 @@
     "gicons": "./cli.js"
   },
   "dependencies": {
-    "sharp": "^0.21.3"
+    "sharp": "^0.30.5"
   }
 }
